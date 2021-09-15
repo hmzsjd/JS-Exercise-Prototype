@@ -104,9 +104,9 @@ Car.prototype.drive = function (distance) {
 */
 
 
-function Baby(toy) {
+function Baby(name, age, toy) {
+  Person.call(this, name, age, toy);
   this.favoriteToy = toy;
-  Person.call(this, toy);
   
 }
 
@@ -123,10 +123,10 @@ Baby.prototype.play = function () {
 /* 
   TASK 4
   In your own words explain the four principles for the "this" keyword below:
-  1. 
-  2. 
-  3. 
-  4. 
+  1. Global Binding: 'this' points to the window if being used in the browser which is the global object. 
+  2. Implicit Binding: 'this' when used inside of an object will point to the object itself. When an object's method is invoked using dot notation, 'this' points to whatever is to the left of the dot. 
+  3. New Binding: 'this' refers to the specific instance of the objected that is created and returned when a constructor function is used. 
+  4. Explicit binding: 'this' refers to the object that is passed into the call() or apply() functions as an argument. 
 */
 
 
